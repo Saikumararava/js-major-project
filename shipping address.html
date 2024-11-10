@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA | Update Shipping Address</title>
+  <link rel="stylesheet" href="shipping address.css">
+</head>
+<body>
+
+  <header>
+    <h1>Update Shipping Address</h1>
+  </header>
+
+  <main>
+    <section class="shipping-address-form">
+      <h2>Enter Shipping Address</h2>
+
+      <form id="shipping-address-form">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="address1">Address Line 1:</label>
+          <input type="text" id="address1" name="address1" required>
+        </div>
+
+        <div class="form-group">
+          <label for="address2">Address Line 2:</label>
+          <input type="text" id="address2" name="address2">
+        </div>
+
+        <div class="form-group">
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" required>
+        </div>
+
+        <div class="form-group">
+          <label for="state">State:</label>
+          <select id="state" name="state" required>
+            <option value="">Select State</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <!-- Add more states as options here -->
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="pincode">Pincode:</label>
+          <input type="text" id="pincode" name="pincode" required>
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country:</label>
+          <input type="text" id="country" name="country" value="India" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <button type="submit">Update Address</button>
+      </form>
+
+      <p id="confirmation-message" style="display: none; color: green;">Address updated successfully!</p>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <script src="shipping address.js"></script>
+</body>
+</html>

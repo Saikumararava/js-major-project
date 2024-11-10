@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #3c6e71;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -252px;
+    height: 100%;
+    width: 250px;
+    background-color: #cf7937;
+    transition: left 0.5s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.sidebar ul li {
+    margin: 40px 0;
+}
+
+.sidebar ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Arial, sans-serif;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #ffffff;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 10px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 27px;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Logo Styles */
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    height: 50px;
+    width: 140px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    font-weight: 700;
+    font-family: "Exo 2", sans-serif;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links a i {
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #cf6815;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1800px;
+    height: 720px;
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-slides {
+    display: flex;
+    width: 400%;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slides img {
+    width: 25%;
+    height: auto;
+    display: block;
+    margin: 10px;
+}
+
+.carousel-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.carousel-arrows button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.carousel-arrows button:hover {
+    opacity: 0.6;
+}
+.heading {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+}
+/* Product Grid Layout */
+.product-grid {
+  display: flex;
+  justify-content: space-between; /* Use space-between to have even space around */
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.product-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  width: calc(50% - 20px); /* Set width to 50% minus margins for two boxes per row */
+}
+
+.product-box img {
+  width: 100%;              /* Set width to 100% to fill the container */
+  height: 350px;           /* Set a fixed height for equal dimensions */
+  object-fit: cover;       /* Cover the box without distorting the image */
+  border-radius: 20px;     /* Keep the existing border radius */
+}
+
+.product-box h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #070707;
+}
+
+.product-box a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent (for heading) */
+}
+
+.product-box:hover img {
+  transform: scale(1.02); /* Slightly scale the image */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.product-box:hover h3 {
+  color: #cf6815; /* Change heading color on hover */
+}
+
+/* Optional: Add media queries for responsiveness */
+@media (max-width: 768px) {
+  .product-box {
+    width: calc(100% - 20px); /* Full width on smaller screens */
+  }
+}
+
+/* Footer_Styles*/
+.footer {
+    background-color: #ffffff;
+    color: rgb(8, 7, 7);
+    text-align: center;
+    padding:15px;
+}
+
+.footer .social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.footer .social-links a {
+    color: rgb(9, 9, 9);
+    margin: 0 10px;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #cf6815;
+}
+

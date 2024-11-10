@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | AURA</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your main CSS file -->
+    <link rel="stylesheet" href="cart.css">   <!-- Specific styles for the cart -->
+</head>
+<body>
+    <header>
+        <h1>Your Shopping Cart</h1>
+    </header>
+
+    <main>
+        <section id="cart-items"></section> <!-- Container for cart items -->
+
+        <div class="cart-summary">
+            <h2>Total Amount:</h2>
+            <p id="total-amount">₹ 0.00</p>
+            <p>Items in Cart: <span id="cart-count">0</span></p>
+            <button id="proceed-button">Proceed to Buy</button> <!-- Added button -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2020 AURA. All rights reserved.</p>
+    </footer>
+
+    <script src="cart.js"></script> <!-- Link to your cart JavaScript file -->
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="background-image">
+        <div class="container">
+            <div class="form-container">
+                <!-- login -->
+                <div class="form-box login-box active">
+                    <h2>Login</h2>
+                    <form id="login-form">
+                        <div class="input-box">
+                            <input type="text" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="submit" value="Login">
+                        </div>
+                        <p class="message">No account? create now!<a href="index.html" id="signup-link">Sign up</a></p>
+                    </form>
+                </div>
+
+                <!-- signup -->
+                <div class="form-box signup-box">
+                    <h2>Sign Up</h2>
+                    <form id="signup-form">
+                        <div class="input-box">
+                            <input type="text" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="submit" value="Sign Up">
+                        </div>
+                        <p class="message">Already have an account? <a href="index.html" id="login-link">Login</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
